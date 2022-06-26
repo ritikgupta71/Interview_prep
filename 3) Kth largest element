@@ -1,0 +1,3 @@
+Arrays.sort(nums);i
+nt klast = nums.length  - k;
+return nums[klast];
