@@ -1,0 +1,26 @@
+link to question - https://www.geeksforgeeks.org/chocolate-distribution-problem/
+
+code : 
+
+import java.util.*;
+class HelloWorld {
+    public static void main(String[] args) {
+        ArrayList<Integer> a = new ArrayList<>(Arrays.asList(7, 3, 2, 4, 9, 12, 56));
+        Collections.sort(a);
+        int n = a.size();
+        int m = 3;
+        int first = 0;
+        int sec = m-1;
+        int min = a.get(n-1);
+        int ans = 0;
+        for(int i = 0; i < n-m;i++){
+            ans = a.get(sec) - a.get(first);
+            if(ans < min){
+                min = ans;
+            }
+            first = first + 1;
+            sec = sec + 1;
+        }
+        System.out.println(min);
+    }
+}
